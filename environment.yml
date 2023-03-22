@@ -1,7 +1,9 @@
 name: helplot
 channels:
+  - plotly
   - defaults
 dependencies:
   - matplotlib=3.7.1
   - numpy=1.23.5
   - scipy=1.10.0
+  - chart-studio=1.1.0

@@ -1,3 +1,5 @@
+from chart_studio import tools
+from chart_studio import plotly as py
 import numpy as np
 import matplotlib.pyplot as plt
 from helplot import *
@@ -56,3 +58,11 @@ ax.axis('off')
 
 plt.show()
 fig.savefig("b2dstmunu_hel.pdf")
+
+# log it
+username = '<my_name>'
+api_key = '<my_api_key>'
+tools.set_credentials_file(username, api_key)
+
+# post
+unique_url = py.plot_mpl(fig, filename="b2dstmunu_hel")
